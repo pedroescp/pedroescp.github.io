@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>ce688ade-e6a7-485e-9c95-130d38867c11</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="WebSocketManager" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\uNotes.Infra.CrossCutting.WebSocketService\uNotes.Infra.CrossCutting.WebSocketService.csproj" />
+    <ProjectReference Include="..\uNotes.Application\uNotes.Application.csproj" />
+    <ProjectReference Include="..\uNotes.Domain\uNotes.Domain.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting.Constantes\uNotes.Infra.CrossCutting.Constantes.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting.RunMigrations\uNotes.Infra.CrossCutting.RunMigrations.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting\uNotes.Infra.CrossCutting.IoC.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.Data\uNotes.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="3" /></VisualStudio></ProjectExtensions>
+
+</Project>

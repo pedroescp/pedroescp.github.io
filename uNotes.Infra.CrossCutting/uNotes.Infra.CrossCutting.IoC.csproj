@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.9" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\uNotes.Infra.CrossCutting.WebSocketService\uNotes.Infra.CrossCutting.WebSocketService.csproj" />
+    <ProjectReference Include="..\uNotes.Application\uNotes.Application.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting.AWS\uNotes.Infra.CrossCutting.AWS.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting.Notificacoes\uNotes.Infra.CrossCutting.Notificacoes.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting.UoW\uNotes.Infra.CrossCutting.UoW.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.Data\uNotes.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

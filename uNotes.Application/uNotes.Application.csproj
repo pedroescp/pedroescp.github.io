@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Requests\Notes1\**" />
+    <Compile Remove="Requests\NovaPasta1\**" />
+    <EmbeddedResource Remove="Requests\Notes1\**" />
+    <EmbeddedResource Remove="Requests\NovaPasta1\**" />
+    <EntityDeploy Remove="Requests\Notes1\**" />
+    <EntityDeploy Remove="Requests\NovaPasta1\**" />
+    <None Remove="Requests\Notes1\**" />
+    <None Remove="Requests\NovaPasta1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AutoMapper\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="LinqKit" Version="1.2.2" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\uNotes.Domain\uNotes.Domain.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting.AWS\uNotes.Infra.CrossCutting.AWS.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting.Notificacoes\uNotes.Infra.CrossCutting.Notificacoes.csproj" />
+    <ProjectReference Include="..\uNotes.Infra.CrossCutting.UoW\uNotes.Infra.CrossCutting.UoW.csproj" />
+  </ItemGroup>
+
+</Project>
